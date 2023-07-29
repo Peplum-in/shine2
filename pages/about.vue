@@ -4,7 +4,7 @@
             <div class="columns">
                 <div class=" column is-5-desktop ">
                     <figure class="is-hidden-desktop image is-4by5 mb-6">
-                        <img  src="/img/shineshine.jpg" class="has-background-warning" alt="" />
+                        <img  src="/assets/shineshine.jpg" class="has-background-warning" alt="" />
                     </figure>
                     <p class="heading">
                             ABOUT US</p>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="column is-6 is-offset-1-desktop is-hidden-touch">
                     <figure class="image is-4by5 mt-5 ">
-                        <img  src="/img/shineshine.jpg" class="has-background-warning" alt="" />
+                        <img  src="/assets/shineshine.jpg" class="has-background-warning" alt="" />
                     </figure>
                 </div>
                 <br>
