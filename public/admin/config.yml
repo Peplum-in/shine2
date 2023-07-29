@@ -1,0 +1,48 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+media_folder: public/img
+public_folder: /img
+site_url: https://shine2.netlify.app/
+
+collections:
+  - name: 'work'
+    label: 'Work'
+    folder: 'content/work'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'caption', name: 'caption', widget: 'string' }
+      - { label: 'tags', name: 'tag',  widget: "relation",
+        collection: "navigation" ,
+        searchFields: ["title"],
+        valueField: "title",
+        displayFields: ["title"] }
+  - name: 'navigation'
+    label: 'Navigation'
+    folder: 'content/nav'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'title', name: 'title', widget: 'string' }
+      - { label: 'Link Text', name: 'link_text', widget: 'string' }
+      - { label: 'body', name: 'body', widget: 'markdown' }
+  - name: 'clients'
+    label: 'Clients'
+    folder: 'content/clients'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'client name', name: 'client', widget: 'string' }
+      - { label: 'Image ( uplaod in 1by1 ratio)', name: 'image', widget: 'image' }
